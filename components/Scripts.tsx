@@ -26,6 +26,7 @@ export const Scripts: React.VFC = () => (
         </Script>
       </>
     )}
+    <script defer src="https://eu.umami.is/script.js" data-website-id="395526d6-4372-4863-999c-250525e50e52"></script>
     <noscript>
       <link
         rel="stylesheet"
