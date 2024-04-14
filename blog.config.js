@@ -2,15 +2,15 @@
  * @type {import('~/types').BlogConfig}
  */
 const BLOG = {
-  title: "yokinist.me template",
-  author: "yokinist",
+  title: "Didier",
+  author: "Didier",
   email: "info@yokinist.me",
   link: "https://yokinist.me",
   externalLink: "https://bento.me/yokinist", // make redirect link to /link page
   repository: "https://github.com/yokinist/yokinist.me",
   description:
     "This is a template for yokinist.me, created by yokinist. You can use it to create your own blog.",
-  lang: "en-US", // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
+  lang: "fr-FR", // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
   appearance: "dark", // ['light', 'dark'],
   font: "sans-serif", // ['sans-serif', 'serif']
   lightBackground: "#ffffff", // use hex value, don't forget '#' e.g #fffefc
