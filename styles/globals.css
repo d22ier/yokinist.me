@@ -132,7 +132,11 @@ nav {
     @apply dark:text-gray-300 text-gray-600;
   }
 }
-
+@media only screen and (max-width: 600px) {
+  html{
+    width:fit-content;
+  }
+}
 @supports not (backdrop-filter: none) {
   .sticky-nav {
     backdrop-filter: none;

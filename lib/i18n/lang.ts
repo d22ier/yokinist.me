@@ -1,12 +1,34 @@
 import BLOG from "~/blog.config";
 
 const lang = {
+  fr: {
+    NAV: {
+      INDEX: "Blog",
+      RSS: "RSS",
+      SEARCH: "Recherche",
+      ABOUT: "A propos",
+      CONTACT: "Contactez-moi",
+    },
+    PAGINATION: {
+      PREV: "Précédent",
+      NEXT: "Suivant",
+    },
+    POST: {
+      BACK: "Retour",
+      TOP: "En haut",
+      SHARE: "Share with Twitter",
+      NOTFOUND: "Article non trouvé.",
+      SEARCH: "Recherchez des Articles",
+      SEARCHIN: "Recherche",
+    },
+  },
   en: {
     NAV: {
       INDEX: "Blog",
       RSS: "RSS",
       SEARCH: "Search",
       ABOUT: "About",
+      CONTACT: "Contact",
     },
     PAGINATION: {
       PREV: "Prev",
@@ -19,86 +41,6 @@ const lang = {
       NOTFOUND: "No posts found.",
       SEARCH: "Search Articles",
       SEARCHIN: "Search in",
-    },
-  },
-  "zh-CN": {
-    NAV: {
-      INDEX: "博客",
-      RSS: "订阅",
-      SEARCH: "搜索",
-      ABOUT: "关于",
-    },
-    PAGINATION: {
-      PREV: "上一页",
-      NEXT: "下一页",
-    },
-    POST: {
-      BACK: "返回",
-      TOP: "回到顶部",
-      SHARE: "Share with Twitter",
-      NOTFOUND: "No posts found.",
-      SEARCH: "Search Articles",
-      SEARCHIN: "Search in",
-    },
-  },
-  "zh-HK": {
-    NAV: {
-      INDEX: "網誌",
-      RSS: "訂閱",
-      SEARCH: "搜尋",
-      ABOUT: "關於",
-    },
-    PAGINATION: {
-      PREV: "上一頁",
-      NEXT: "下一頁",
-    },
-    POST: {
-      BACK: "返回",
-      TOP: "回到頂端",
-      SHARE: "Share with Twitter",
-      NOTFOUND: "No posts found.",
-      SEARCH: "Search Articles",
-      SEARCHIN: "Search in",
-    },
-  },
-  "zh-TW": {
-    NAV: {
-      INDEX: "部落格",
-      RSS: "訂閱",
-      SEARCH: "搜尋",
-      ABOUT: "關於",
-    },
-    PAGINATION: {
-      PREV: "上一頁",
-      NEXT: "下一頁",
-    },
-    POST: {
-      BACK: "返回",
-      TOP: "回到頂端",
-      SHARE: "Share with Twitter",
-      NOTFOUND: "No posts found.",
-      SEARCH: "Search Articles",
-      SEARCHIN: "Search in",
-    },
-  },
-  ja: {
-    NAV: {
-      INDEX: "Blog",
-      RSS: "RSS",
-      SEARCH: "Search",
-      ABOUT: "About",
-    },
-    PAGINATION: {
-      PREV: "Prev",
-      NEXT: "Next",
-    },
-    POST: {
-      BACK: "Back",
-      TOP: "Top",
-      SHARE: "Twitter でシェアする",
-      NOTFOUND: "該当する記事はありません...🙇",
-      SEARCH: "記事を検索する",
-      SEARCHIN: "",
     },
   },
   es: {
@@ -107,6 +49,7 @@ const lang = {
       RSS: "RSS",
       SEARCH: "Buscar",
       ABOUT: "Acerca de mí",
+      CONTACT: "Contact"
     },
     PAGINATION: {
       PREV: "Anterior",
@@ -125,20 +68,23 @@ const lang = {
 
 export const fetchLocaleLang = () => {
   const s = BLOG.lang.toLowerCase();
+  if (s === "fr-FR") {
+    return lang.fr;
+  }else
   if (s === "zh-cn" || s === "zh-sg") {
     return lang["zh-CN"];
-  }
+  }else 
   if (s === "zh-hk") {
     return lang["zh-HK"];
-  }
+  }else 
   if (s === "zh-tw") {
     return lang["zh-TW"];
-  }
+  }else 
   if (s === "ja" || s === "ja-jp") {
     return lang.ja;
-  }
+  }else 
   if (s === "es" || s === "es-ES") {
     return lang.es;
   }
-  return lang.en;
+  return lang.fr;
 };

@@ -1,4 +1,3 @@
-import { MoonIcon, SunIcon } from "@heroicons/react/20/solid";
 import classNames from "classnames";
 import { useTheme } from "next-themes";
 import Link from "next/link";
@@ -6,12 +5,13 @@ import { useRouter } from "next/router";
 import { useCallback, useEffect, useMemo, useRef } from "react";
 import BLOG from "~/blog.config";
 import { fetchLocaleLang } from "~/lib/i18n/lang";
-import { Twemoji } from "./Twemoji";
+//import { Twemoji } from "./Twemoji";
 
 const locale = fetchLocaleLang();
 const links = [
   { id: 1, name: locale.NAV.INDEX, to: BLOG.path || "/", show: true },
   { id: 2, name: locale.NAV.ABOUT, to: "/about", show: BLOG.showAbout },
+  { id: 3, name: locale.NAV.CONTACT, to: "/contact", show: true },
   // { id: 4, name: locale.NAV.RSS, to: '/feed', show: true },
 ];
 
@@ -44,7 +44,7 @@ const NavBar: React.VFC = () => {
               </li>
             ),
         )}
-        <li className="ml-4">
+        {/*<li className="ml-4">
           <button
             className="group block p-1 bg-night hover:bg-day dark:bg-day dark:hover:bg-night rounded-full transition-all duration-300"
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
@@ -57,7 +57,7 @@ const NavBar: React.VFC = () => {
               <SunIcon className="w-5 h-5 text-night group-hover:text-day" />
             )}
           </button>
-        </li>
+        </li>*/}
       </ul>
     </div>
   );
@@ -110,7 +110,7 @@ export const Header: React.VFC<HeaderProps> = ({ navBarTitle, fullWidth }) => {
         <div className="flex items-center">
           <Link href="/" aria-label={BLOG.title}>
             <div className="min-w-max">
-              <Twemoji emoji={"👋"} size={28} />
+              <img src="/favicon.png" alt="logo" />
             </div>
           </Link>
           {navBarTitle ? (

@@ -67,9 +67,6 @@ const TagPage: NextPage<Props> = ({
       isTagPage
       slug={typeof tag === "string" ? tag : undefined}
     >
-      {post && blockMap && (
-        <Profile blockMap={blockMap} post={post} emailHash={emailHash} />
-      )}
       <SearchLayout tags={tags} posts={posts} currentTag={currentTag} />
     </Container>
   );

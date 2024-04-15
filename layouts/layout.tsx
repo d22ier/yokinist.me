@@ -87,8 +87,7 @@ export const Layout: React.VFC<Props> = ({
     >
       {renderContents()}
       <div className="mb-4">
-        <div>---</div>
-        <div className="flex">
+        {/*<div className="flex">
           <a
             href={getTwitterShareUrl({
               text: post?.title ?? BLOG.title,
@@ -102,7 +101,7 @@ export const Layout: React.VFC<Props> = ({
           >
             {locale?.POST.SHARE}
           </a>
-        </div>
+          </div>*/}
       </div>
       <div className="flex justify-between font-medium text-gray-500 dark:text-gray-400">
         <button
