@@ -10,7 +10,7 @@ export function generateRss(posts: Post[]) {
     id: `${BLOG.link}/${BLOG.path}`,
     link: `${BLOG.link}/${BLOG.path}`,
     language: BLOG.lang,
-    favicon: `${BLOG.link}/favicon.svg`,
+    favicon: `${BLOG.link}/favicon.ico`,
     copyright: `All rights reserved ${year}, ${BLOG.author}`,
     author: {
       name: BLOG.author,

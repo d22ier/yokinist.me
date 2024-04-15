@@ -11,22 +11,12 @@ import { LocaleProvider } from "~/lib/i18n/locale";
 import "~/styles/globals.css";
 import "~/styles/notion.css";
 
-const Ackee = dynamic(() => import("~/components/Stats/Ackee"), { ssr: false });
-const Gtag = dynamic(() => import("~/components/Stats/Gtag"), { ssr: false });
-
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Scripts />
       <LocaleProvider>
         <>
-          {BLOG.isProd && BLOG.analytics.provider === "ackee" && (
-            <Ackee
-              ackeeServerUrl={BLOG.analytics.ackeeConfig.dataAckeeServer}
-              ackeeDomainId={BLOG.analytics.ackeeConfig.domainId}
-            />
-          )}
-          {BLOG.isProd && BLOG.analytics.provider === "ga" && <Gtag />}
           <ThemeProvider
             attribute="class"
             defaultTheme={BLOG.appearance}
