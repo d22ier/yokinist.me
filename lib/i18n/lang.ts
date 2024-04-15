@@ -70,21 +70,6 @@ export const fetchLocaleLang = () => {
   const s = BLOG.lang.toLowerCase();
   if (s === "fr-FR") {
     return lang.fr;
-  }else
-  if (s === "zh-cn" || s === "zh-sg") {
-    return lang["zh-CN"];
-  }else 
-  if (s === "zh-hk") {
-    return lang["zh-HK"];
-  }else 
-  if (s === "zh-tw") {
-    return lang["zh-TW"];
-  }else 
-  if (s === "ja" || s === "ja-jp") {
-    return lang.ja;
-  }else 
-  if (s === "es" || s === "es-ES") {
-    return lang.es;
   }
   return lang.fr;
 };
