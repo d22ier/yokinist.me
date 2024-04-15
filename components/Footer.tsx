@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import BLOG from "~/blog.config";
-import Profile from "./Profile";
+import {Profile} from "./Profile";
 
 type Props = { fullWidth?: boolean };
 
