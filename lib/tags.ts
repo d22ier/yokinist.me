@@ -34,6 +34,11 @@ const TAG_DATA: Record<TagSlug, TagData> = {
     emoji: "📋",
     slug: TAG_SLUGS.Productivite,
   },
+   [TAG_SLUGS.Link]: {
+    name: "Link",
+    emoji: "🔗",
+    slug: TAG_SLUGS.Link,
+  },
   [TAG_SLUGS.Automatisation]: {
     name: "Automatisation",
     emoji: "🔋",
